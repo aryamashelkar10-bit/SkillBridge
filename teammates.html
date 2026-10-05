@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Teammates | SkillBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teammates.html" class="active">Find Teammates</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="post-project.html">Post Project</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" class="btn-nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h1>Find Teammates</h1>
+    <p>Discover students by skills, branch, and year. Connect and build together.</p>
+  </section>
+
+  <!-- ===== SEARCH & FILTER BAR ===== -->
+  <!-- Sticky bar with search input and filter dropdowns -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <!-- Search by name, skill, or interest -->
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search by name, skill, or interest..."
+      />
+
+      <!-- Filter by Branch -->
+      <select id="filterBranch" class="filter-select">
+        <option value="">All Branches</option>
+        <option value="computer">Computer Engineering</option>
+        <option value="information">Information Technology</option>
+        <option value="electronics">Electronics</option>
+        <option value="mechanical">Mechanical</option>
+        <option value="civil">Civil</option>
+      </select>
+
+      <!-- Filter by Year -->
+      <select id="filterYear" class="filter-select">
+        <option value="">All Years</option>
+        <option value="1st year">1st Year</option>
+        <option value="2nd year">2nd Year</option>
+        <option value="3rd year">3rd Year</option>
+        <option value="4th year">4th Year</option>
+      </select>
+
+      <!-- Filter by Skill -->
+      <select id="filterSkill" class="filter-select">
+        <option value="">All Skills</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="machine learning">Machine Learning</option>
+        <option value="ui/ux">UI/UX Design</option>
+        <option value="android">Android Dev</option>
+        <option value="react">React</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ===== STUDENTS GRID ===== -->
+  <!-- Sample student data displayed as cards. JS reads data-* attributes for filtering -->
+  <section class="students-section">
+    <div class="students-grid" id="studentsGrid">
+
+      <!-- Student Card 1 -->
+      <div class="student-card"
+           data-name="arjun sharma"
+           data-branch="computer engineering"
+           data-year="3rd year"
+           data-skills="html css javascript python react node.js machine learning"
+           data-interests="web development ai/ml open source hackathons">
+        <div class="student-card-header">
+          <div class="avatar">AS</div>
+          <div class="student-card-info">
+            <h3>Arjun Sharma</h3>
+            <p>Computer Engineering · 3rd Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">Python</span>
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">AI/ML</span>
+          <span class="tag tag-secondary">Hackathons</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 2 -->
+      <div class="student-card"
+           data-name="priya patel"
+           data-branch="information technology"
+           data-year="2nd year"
+           data-skills="ui/ux design figma html css"
+           data-interests="design product management user research">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#fce7f3; color:#9d174d;">PP</div>
+          <div class="student-card-info">
+            <h3>Priya Patel</h3>
+            <p>Information Technology · 2nd Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">Figma</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Design</span>
+          <span class="tag tag-secondary">Product</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 3 -->
+      <div class="student-card"
+           data-name="rahul desai"
+           data-branch="computer engineering"
+           data-year="4th year"
+           data-skills="java android development kotlin firebase"
+           data-interests="android development mobile apps startups">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#d1fae5; color:#065f46;">RD</div>
+          <div class="student-card-info">
+            <h3>Rahul Desai</h3>
+            <p>Computer Engineering · 4th Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">Java</span>
+          <span class="tag">Android Dev</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Mobile Apps</span>
+          <span class="tag tag-secondary">Startups</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 4 -->
+      <div class="student-card"
+           data-name="sneha kulkarni"
+           data-branch="electronics"
+           data-year="3rd year"
+           data-skills="python machine learning data analysis numpy pandas"
+           data-interests="data science machine learning research">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#fef3c7; color:#92400e;">SK</div>
+          <div class="student-card-info">
+            <h3>Sneha Kulkarni</h3>
+            <p>Electronics Engineering · 3rd Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Pandas</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Data Science</span>
+          <span class="tag tag-secondary">Research</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 5 -->
+      <div class="student-card"
+           data-name="karan mehta"
+           data-branch="information technology"
+           data-year="2nd year"
+           data-skills="javascript react node.js express mongodb"
+           data-interests="web development full stack open source">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#e0e7ff; color:#3730a3;">KM</div>
+          <div class="student-card-info">
+            <h3>Karan Mehta</h3>
+            <p>Information Technology · 2nd Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Full Stack</span>
+          <span class="tag tag-secondary">Open Source</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 6 -->
+      <div class="student-card"
+           data-name="ananya joshi"
+           data-branch="computer engineering"
+           data-year="1st year"
+           data-skills="c c++ python html css"
+           data-interests="competitive programming algorithms hackathons">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#ffe4e6; color:#9f1239;">AJ</div>
+          <div class="student-card-info">
+            <h3>Ananya Joshi</h3>
+            <p>Computer Engineering · 1st Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">C/C++</span>
+          <span class="tag">Python</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Competitive Programming</span>
+          <span class="tag tag-secondary">Algorithms</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 7 -->
+      <div class="student-card"
+           data-name="vikram nair"
+           data-branch="mechanical"
+           data-year="3rd year"
+           data-skills="autocad solidworks python matlab"
+           data-interests="robotics iot embedded systems">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#dcfce7; color:#166534;">VN</div>
+          <div class="student-card-info">
+            <h3>Vikram Nair</h3>
+            <p>Mechanical Engineering · 3rd Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">AutoCAD</span>
+          <span class="tag">Python</span>
+          <span class="tag">MATLAB</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Robotics</span>
+          <span class="tag tag-secondary">IoT</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- Student Card 8 -->
+      <div class="student-card"
+           data-name="divya iyer"
+           data-branch="information technology"
+           data-year="4th year"
+           data-skills="python django machine learning tensorflow"
+           data-interests="ai ml deep learning nlp">
+        <div class="student-card-header">
+          <div class="avatar" style="background:#f0fdf4; color:#15803d;">DI</div>
+          <div class="student-card-info">
+            <h3>Divya Iyer</h3>
+            <p>Information Technology · 4th Year</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="label">Skills</div>
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">TensorFlow</span>
+        </div>
+        <div class="skills-row">
+          <div class="label">Interests</div>
+          <span class="tag tag-secondary">Deep Learning</span>
+          <span class="tag tag-secondary">NLP</span>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Profile</a>
+          <button class="btn btn-primary btn-sm btn-connect">Connect</button>
+        </div>
+      </div>
+
+      <!-- No results message (hidden by default, shown by JS) -->
+      <p class="no-results" id="noResults" style="display:none;">
+        No students found matching your filters. Try adjusting your search.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+        <p>A college-exclusive platform helping students connect, collaborate, and build better projects together.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teammates.html">Find Teammates</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="post-project.html">Post Project</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SkillBridge. Made for college students, by college students.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

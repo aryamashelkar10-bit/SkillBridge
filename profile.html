@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Sharma – Profile | SkillBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teammates.html">Find Teammates</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="post-project.html">Post Project</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+        <li><a href="login.html" class="btn-nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PROFILE PAGE ===== -->
+  <!-- Two-column layout using CSS Grid (sidebar + main content) -->
+  <main class="profile-page">
+    <div class="profile-inner">
+
+      <!-- ---- LEFT SIDEBAR: Basic Info ---- -->
+      <aside class="profile-sidebar">
+
+        <!-- Profile Photo Placeholder (Avatar using initials) -->
+        <div class="profile-avatar">AS</div>
+
+        <h2>Arjun Sharma</h2>
+        <p class="college">SPPU – PICT, Pune</p>
+        <p class="course-year">Computer Engineering · 3rd Year</p>
+
+        <!-- Connect and message buttons -->
+        <a href="#" class="btn btn-primary btn-connect">Connect</a>
+        <a href="post-project.html" class="btn btn-outline" style="display:block; margin-top:10px;">Post a Project</a>
+
+        <!-- Stats (connections, projects) -->
+        <div class="profile-stat-row">
+          <div class="profile-stat">
+            <span>12</span>
+            <small>Projects</small>
+          </div>
+          <div class="profile-stat">
+            <span>48</span>
+            <small>Connections</small>
+          </div>
+          <div class="profile-stat">
+            <span>5</span>
+            <small>Hackathons</small>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ---- RIGHT SIDE: Detailed Sections ---- -->
+      <div class="profile-main">
+
+        <!-- About Section -->
+        <div class="profile-section">
+          <h3>About</h3>
+          <p>
+            I am a 3rd year Computer Engineering student at PICT, Pune with a passion for
+            full-stack web development and machine learning. I enjoy building practical
+            solutions to real-world problems and love participating in hackathons. Looking for
+            like-minded students to collaborate on interesting projects.
+          </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="profile-section">
+          <h3>Skills</h3>
+          <!-- Using tag utility class from style.css -->
+          <div>
+            <span class="tag">HTML &amp; CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="profile-section">
+          <h3>Interests</h3>
+          <div>
+            <span class="tag tag-secondary">Web Development</span>
+            <span class="tag tag-secondary">AI / ML</span>
+            <span class="tag tag-secondary">Open Source</span>
+            <span class="tag tag-secondary">Hackathons</span>
+            <span class="tag tag-secondary">UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="profile-section">
+          <h3>Projects</h3>
+
+          <div class="profile-project-item">
+            <h4>SmartAttendance – AI Attendance System</h4>
+            <p>Face recognition-based attendance system built with Python and OpenCV. Used in college as a prototype.</p>
+            <div style="margin-top:6px;">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Flask</span>
+            </div>
+          </div>
+
+          <div class="profile-project-item">
+            <h4>CampusConnect – College Event Portal</h4>
+            <p>A web portal for students to discover and register for college events, workshops, and seminars.</p>
+            <div style="margin-top:6px;">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="profile-project-item">
+            <h4>ExpenseTracker – Personal Finance App</h4>
+            <p>A simple expense tracking web app with visual charts to help students manage their monthly budget.</p>
+            <div style="margin-top:6px;">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hackathons & Competitions Section -->
+        <div class="profile-section">
+          <h3>Hackathons &amp; Competitions</h3>
+
+          <div class="hackathon-item">
+            <div class="hackathon-icon">🏆</div>
+            <div>
+              <h4>Smart India Hackathon 2023 – Finalist</h4>
+              <p>National-level hackathon · Built a digital grievance portal for government bodies</p>
+            </div>
+          </div>
+
+          <div class="hackathon-item">
+            <div class="hackathon-icon">🥈</div>
+            <div>
+              <h4>TechThon PICT 2023 – 2nd Place</h4>
+              <p>College-level hackathon · Developed an AI-powered study planner for students</p>
+            </div>
+          </div>
+
+          <div class="hackathon-item">
+            <div class="hackathon-icon">🎖️</div>
+            <div>
+              <h4>HackSprint Pune 2024 – Participant</h4>
+              <p>City-level hackathon · Created a real-time collaboration tool for remote teams</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End .profile-main -->
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+        <p>A college-exclusive platform helping students connect, collaborate, and build better projects together.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teammates.html">Find Teammates</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="post-project.html">Post Project</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SkillBridge. Made for college students, by college students.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

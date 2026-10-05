@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Project | SkillBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teammates.html">Find Teammates</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="post-project.html" class="active">Post Project</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" class="btn-nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h1>Post a Project</h1>
+    <p>Share your project idea and find the right teammates to build it with.</p>
+  </section>
+
+  <!-- ===== POST PROJECT FORM ===== -->
+  <!-- Form validated by JS. All fields have associated error elements. -->
+  <section class="form-page">
+    <div class="form-card">
+      <h2>Project Details</h2>
+      <p class="form-desc">Fill in the details below. Fields marked with * are required.</p>
+
+      <form id="postProjectForm" novalidate>
+
+        <!-- Project Title -->
+        <div class="form-group">
+          <label for="projTitle">Project Title *</label>
+          <input
+            type="text"
+            id="projTitle"
+            placeholder="e.g. Campus Event Management Portal"
+            data-err="Title"
+          />
+          <span class="form-error" id="errTitle"></span>
+        </div>
+
+        <!-- Project Description -->
+        <div class="form-group">
+          <label for="projDesc">Project Description *</label>
+          <textarea
+            id="projDesc"
+            placeholder="Describe what your project does, its purpose, and what problem it solves..."
+            rows="5"
+            data-err="Desc"
+          ></textarea>
+          <span class="form-error" id="errDesc"></span>
+        </div>
+
+        <!-- Category and Team Size in a two-column row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projCategory">Category *</label>
+            <select id="projCategory" data-err="Category">
+              <option value="">Select a category</option>
+              <option value="Web Development">Web Development</option>
+              <option value="AI / ML">AI / ML</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="IoT">IoT</option>
+              <option value="Game Development">Game Development</option>
+              <option value="Open Source">Open Source</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="form-error" id="errCategory"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="projTeamSize">Team Size Needed *</label>
+            <input
+              type="number"
+              id="projTeamSize"
+              placeholder="e.g. 3"
+              min="1"
+              max="10"
+              data-err="TeamSize"
+            />
+            <span class="form-error" id="errTeamSize"></span>
+          </div>
+        </div>
+
+        <!-- Required Skills -->
+        <div class="form-group">
+          <label for="projSkills">Required Skills *</label>
+          <input
+            type="text"
+            id="projSkills"
+            placeholder="e.g. Python, React, UI/UX Design (comma separated)"
+            data-err="Skills"
+          />
+          <span class="form-error" id="errSkills"></span>
+        </div>
+
+        <!-- Deadline and Category in a row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projDeadline">Project Deadline</label>
+            <input type="date" id="projDeadline" />
+          </div>
+
+          <div class="form-group">
+            <label for="projDomain">Project Domain</label>
+            <input type="text" id="projDomain" placeholder="e.g. Hackathon, Mini Project" />
+          </div>
+        </div>
+
+        <!-- Additional Requirements -->
+        <div class="form-group">
+          <label for="projRequirements">Additional Requirements</label>
+          <textarea
+            id="projRequirements"
+            placeholder="Any specific requirements, preferred year of teammates, availability, etc."
+            rows="3"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="width:100%; padding:13px; font-size:1rem; margin-top:6px;">
+          Post Project
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+        <p>A college-exclusive platform helping students connect, collaborate, and build better projects together.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teammates.html">Find Teammates</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="post-project.html">Post Project</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SkillBridge. Made for college students, by college students.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

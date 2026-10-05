@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | SkillBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teammates.html">Find Teammates</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="post-project.html">Post Project</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" class="btn-nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h1>Explore Projects</h1>
+    <p>Browse project ideas posted by students. Find one you love and join the team.</p>
+  </section>
+
+  <!-- ===== SEARCH & FILTER BAR ===== -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <input
+        type="text"
+        id="searchProjects"
+        class="search-input"
+        placeholder="Search projects by title or skill..."
+      />
+
+      <!-- Filter by Category -->
+      <select id="filterCategory" class="filter-select">
+        <option value="">All Categories</option>
+        <option value="web development">Web Development</option>
+        <option value="ai/ml">AI / ML</option>
+        <option value="mobile app">Mobile App</option>
+        <option value="iot">IoT</option>
+        <option value="game">Game Dev</option>
+        <option value="open source">Open Source</option>
+      </select>
+
+      <!-- Filter by Required Skill -->
+      <select id="filterProjSkill" class="filter-select">
+        <option value="">All Skills</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+        <option value="machine learning">Machine Learning</option>
+        <option value="android">Android</option>
+        <option value="flutter">Flutter</option>
+      </select>
+
+      <!-- Link to post a new project -->
+      <a href="post-project.html" class="btn btn-primary btn-sm">+ Post Project</a>
+    </div>
+  </div>
+
+  <!-- ===== PROJECTS GRID ===== -->
+  <!-- data-* attributes are used by JS to filter cards -->
+  <section class="projects-section">
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- Project Card 1 -->
+      <div class="project-card"
+           data-category="web development"
+           data-skills="react node.js mongodb"
+           data-title="campus event management portal">
+        <div class="project-card-top">
+          <h3>Campus Event Management Portal</h3>
+          <span class="project-category">Web Dev</span>
+        </div>
+        <p class="project-desc">
+          A full-stack web portal where students can create, discover, and register for
+          college events, fests, workshops, and competitions.
+        </p>
+        <div class="project-meta">
+          <span>👥 3–4 members needed</span>
+          <span>📅 Deadline: 30 Nov 2024</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Arjun Sharma</strong> · CE 3rd Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card"
+           data-category="ai/ml"
+           data-skills="python machine learning tensorflow flask"
+           data-title="ai study planner for students">
+        <div class="project-card-top">
+          <h3>AI Study Planner for Students</h3>
+          <span class="project-category" style="background:#e0f2fe; color:#0369a1;">AI / ML</span>
+        </div>
+        <p class="project-desc">
+          An intelligent study planner that creates personalized schedules based on
+          a student's syllabus, upcoming exams, and learning speed.
+        </p>
+        <div class="project-meta">
+          <span>👥 2–3 members needed</span>
+          <span>📅 Deadline: 15 Dec 2024</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Flask</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Sneha Kulkarni</strong> · EC 3rd Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card"
+           data-category="mobile app"
+           data-skills="android java kotlin firebase"
+           data-title="hostel room booking app">
+        <div class="project-card-top">
+          <h3>Hostel Room Booking App</h3>
+          <span class="project-category" style="background:#dcfce7; color:#166534;">Mobile App</span>
+        </div>
+        <p class="project-desc">
+          An Android app for students to view hostel room availability, book rooms, and
+          manage their hostel profile digitally.
+        </p>
+        <div class="project-meta">
+          <span>👥 3 members needed</span>
+          <span>📅 Deadline: 20 Jan 2025</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">Android</span>
+          <span class="tag">Java</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Rahul Desai</strong> · CE 4th Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-card"
+           data-category="iot"
+           data-skills="python arduino iot c"
+           data-title="smart campus parking system">
+        <div class="project-card-top">
+          <h3>Smart Campus Parking System</h3>
+          <span class="project-category" style="background:#fef9c3; color:#854d0e;">IoT</span>
+        </div>
+        <p class="project-desc">
+          An IoT-based system to monitor real-time parking availability on campus,
+          helping students and staff find spots without manual search.
+        </p>
+        <div class="project-meta">
+          <span>👥 4 members needed</span>
+          <span>📅 Deadline: 28 Feb 2025</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">IoT</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Python</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Vikram Nair</strong> · Mech 3rd Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- Project Card 5 -->
+      <div class="project-card"
+           data-category="web development"
+           data-skills="html css javascript react"
+           data-title="student portfolio generator">
+        <div class="project-card-top">
+          <h3>Student Portfolio Generator</h3>
+          <span class="project-category">Web Dev</span>
+        </div>
+        <p class="project-desc">
+          A tool that helps students automatically generate a professional portfolio
+          website by filling in a simple form with their details, skills, and projects.
+        </p>
+        <div class="project-meta">
+          <span>👥 2 members needed</span>
+          <span>📅 Deadline: 10 Dec 2024</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Karan Mehta</strong> · IT 2nd Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- Project Card 6 -->
+      <div class="project-card"
+           data-category="ai/ml"
+           data-skills="python nlp machine learning tensorflow"
+           data-title="plagiarism detection tool for colleges">
+        <div class="project-card-top">
+          <h3>Plagiarism Detection Tool</h3>
+          <span class="project-category" style="background:#e0f2fe; color:#0369a1;">AI / ML</span>
+        </div>
+        <p class="project-desc">
+          An NLP-based plagiarism detection tool designed specifically for college
+          assignments. Generates detailed similarity reports.
+        </p>
+        <div class="project-meta">
+          <span>👥 3 members needed</span>
+          <span>📅 Deadline: 5 Jan 2025</span>
+        </div>
+        <div style="margin-bottom:10px;">
+          <span class="tag">Python</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+        <p class="project-posted">Posted by <strong>Divya Iyer</strong> · IT 4th Year</p>
+        <div class="card-actions">
+          <a href="profile.html" class="btn btn-outline btn-sm">View Project</a>
+          <button class="btn btn-primary btn-sm btn-join">Join Project</button>
+        </div>
+      </div>
+
+      <!-- No results message -->
+      <p class="no-results" id="noResultsProj" style="display:none;">
+        No projects found. Try different filters.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+        <p>A college-exclusive platform helping students connect, collaborate, and build better projects together.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teammates.html">Find Teammates</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="post-project.html">Post Project</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SkillBridge. Made for college students, by college students.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

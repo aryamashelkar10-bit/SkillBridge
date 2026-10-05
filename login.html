@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | SkillBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Skill<span>Bridge</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teammates.html">Find Teammates</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="post-project.html">Post Project</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" class="btn-nav-login active">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== LOGIN FORM ===== -->
+  <!-- Centered card layout using Flexbox on .auth-page -->
+  <div class="auth-page">
+    <div class="auth-card">
+
+      <!-- SkillBridge logo at top of auth card -->
+      <div class="auth-logo">Skill<span>Bridge</span></div>
+
+      <h1 class="auth-title">Welcome back!</h1>
+      <p class="auth-subtitle">Login with your college email to continue.</p>
+
+      <form id="loginForm" novalidate>
+
+        <!-- College Email -->
+        <div class="form-group">
+          <label for="loginEmail">College Email *</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="yourname@college.edu"
+          />
+          <span class="form-error" id="loginEmailErr"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="loginPassword">Password *</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+          />
+          <span class="form-error" id="loginPassErr"></span>
+          <!-- Forgot password link -->
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" class="btn btn-primary">Login</button>
+
+      </form>
+
+      <!-- Divider -->
+      <div class="auth-divider">or</div>
+
+      <!-- Link to Sign Up page -->
+      <p class="auth-footer-text">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
